@@ -1,0 +1,27 @@
+# github action 名稱
+name: Github Action Demo - Hello World!
+
+# 在哪個 branch 會觸發 github action 動作
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  # job
+  test:
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: step name
+        run: echo 'test'
+  build:
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: step name
+        run: echo 'build'
+  deploy:
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: step name
+        run: echo 'deploy'
